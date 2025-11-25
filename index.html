@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+   
+</head>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body{
+    margin: 0;
+    background-color: #F9F9F9;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  /* HEADER */
+
+  header {
+    background-color: #161616;
+    padding: 25px 0;
+  }
+
+  .header-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .header-icon{
+    width: 80px;
+  }
+
+  nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+
+  /* HERO BANNER */
+
+  main{
+    margin: 100px 0;
+  }
+
+  #hero-banner{
+    position: relative;
+  }
+
+  .background-branches{
+    position: absolute;
+    top: -200px;             
+    left: 0;            
+    width: 65%;         
+    /* height: auto; */
+    z-index: -1;       
+  }
+
+  .hero-banner-container{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-content-left{
+    flex-basis: 50%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .bsd-rabisco{
+    max-width: 110%;
+  }
+
+  .hero-content-left p{
+    max-width: 85%;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 30px;
+  }
+
+  .btn {
+    padding: 15px 45px;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.3s;
+    font-family: "Heebo", sans-serifs;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    opacity: 0.85;
+  }
+
+  .btn-primary {
+    background-color: #7E0101;
+  }
+
+  .btn-secondary {
+    background-color: #161616;
+  }
+
+  .hero-image-right {
+    flex-basis: 40%;
+    flex-grow: 1;
+    text-align: right;
+  }
+
+  .hero-image-right img {
+    max-width: 85%;
+  }
+
+  /* TOOLS */
+
+  .tools-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    gap: 30px;
+
+    max-width: 1200px;
+    margin: 100px auto;
+  }
+
+  .tool-card {
+
+    flex-basis: calc(25% - 22.5px);
+    flex-grow: 1;
+    
+    padding: 25px; 
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    text-align: left;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);  */
+    z-index: -2;
+  }
+
+  .tool-icon {
+    width: 50px;
+    margin-bottom: 15px;
+  }
+
+  .tool-card h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #161616;
+  }
+
+  .tool-card p {
+    margin: 0;
+    line-height: 1.4;
+    color: #555;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  /* ABOUT ME */
+
+  #about-me{
+    position: relative;
+  }
+
+  .background-texture {
+    position: absolute;
+    top: 0;
+    right: 0;            
+    width: 35%;         
+    /* height: auto; */
+    z-index: -1;   
+  }
+
+  .about-me-container{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about-me-image-left{
+    position: relative;
+    flex-basis: 50%;
+    flex-grow: 1;
+    text-align: right;
+  }
+
+  .pen-svg {
+    position: absolute;
+    top: 65px;
+    right: 15px;
+    z-index: -1
+  }
+
+  .about-me-content-right{
+    flex-basis: 40%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-me-description{
+    font-family: "Heebo", sans-serifs;
+    color: #868686;
+  }
+
+  .progress-container{
+    max-width: fit-content;
+  }
+
+  .progress-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .progress-details p{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  
+  .mail-area{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .mail-icon{
+    background-color: #FFFFFF;
+    width: 55px;
+    height: 55px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mail-action{
+    margin-left: 20px;
+  }
+
+  .mail-action h3{
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;  
+  }
+  .mail-action p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #868686;
+  }
+
+</style>
+
+<body>
+
+  <header>
+    <div class="header-container">
+      <div>
+        <img src="images/black_sheep_icon.svg" alt="" class="header-icon">
+      </div>
+      <nav>
+        <a href="#about-me">Sobre mim</a>
+        <a href="">Serviços</a>
+        <a href="">Portfólio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+    <section id="hero-banner">
+      <img src="images/branches.png" alt="" class="background-branches">
+      <div class="hero-banner-container">
+        <div class="hero-content-left">
+
+          <div>
+            <img src="images/bsd_rabisco.svg" alt="" class="bsd-rabisco">
+          </div>
+
+          <p>Focado em User Experience e Interface do Usuário, Motion Design e comunicação. Meu objetivo é fazer o <b>seu projeto um horror!</b></p>
+
+          <div class="hero-buttons">
+            <a class="btn btn-primary">Entre em contato</a>
+            <a href="images/figma.png" download class="btn btn-secondary">Baixar Currículo</a>
+          </div>
+
+        </div>
+        <div class="hero-image-right">
+          <img src="images/sheep-dark-background.png">
+        </div>
+      </div>
+    </section>
+
+    <section id="tools">
+      <div class="tools-container">
+
+        <div class="tool-card">
+          <img src="images/illustrator.png" alt="" class="tool-icon">
+          <h3>Adobe Illustrator</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+        </div>
+
+        <div class="tool-card">
+          <img src="images/photoshop.png" alt="" class="tool-icon">
+          <h3>Adobe Photoshop</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+        </div>
+
+        <div class="tool-card">
+          <img src="images/after_effects.png" alt="" class="tool-icon">
+          <h3>Adobe After Effects</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+        </div>
+
+        <div class="tool-card">
+          <img src="images/figma.png" alt="" class="tool-icon">
+          <h3>Figma</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="about-me">
+      <div class="about-me-container">
+
+        <div class="about-me-image-left">
+          <img src="images/jow_galeria.png">
+          <img src="images/pen.svg" class="pen-svg">
+        </div>
+        
+        <div class="about-me-content-right">
+
+          <p style="color: #7E0101; font-weight: 500;">SOBRE MIM</p>
+          <img src="images/pra_voce_sou_jow.svg" alt="">
+          <p class="about-me-description">
+            Estudante de Design de São Paulo, criado entre CDs riscados de filmes de terror e riffs
+            de bandas nu-metal, focado em Motion Design e UX/UI. Meu trabalho bebe de varias
+            fontes desde as trasheiras da Troma Entertainment, slasher, sangue falso e os caralho.
+            Aos 21, já abandonei a ideia de salvar a minha alma.
+          </p>
+
+          <div class="progress-container">
+            <div class="progress-details">
+              <p>Nível de Estresse</p>
+              <p>90%</p>
+            </div>
+            <img src="images/stress_progress.svg" alt="">
+          </div>
+
+          <div class="progress-container">
+            <div class="progress-details">
+              <p>Vontade de viver</p>
+              <p>30%</p>
+            </div>
+            <img src="images/life_progress.svg" alt="">
+          </div>
+
+          <div class="mail-area">
+            <div class="mail-icon">
+              <img src="images/mail.svg" alt="">
+            </div>
+            <div class="mail-action">
+              <h3>Mande um e-mail</h3>
+              <p>blacksheepds@gmail.com</p>
+            </div>
+          </div>
+
+            <!-- <a class="btn btn-primary">Ver mais</a> -->
+
+        </div>
+        
+      </div>
+      <img src="images/bg_texture.png" alt="" class="background-texture">
+    </section>
+    
+
+  </main>
+  
+  <footer>
+
+  </footer>
+
+</body>
+</html>

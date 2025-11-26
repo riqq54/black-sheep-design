@@ -55,10 +55,21 @@
     text-decoration: none;
   }
 
+  /* FIXED SOCIALS */
+
+  .fixed-socials{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    gap: 15px;
+    left: 20px;
+    top: 45%
+  }
+
   /* HERO BANNER */
 
   main{
-    margin: 100px 0;
+    margin-top: 100px;
   }
 
   #hero-banner{
@@ -106,10 +117,10 @@
   }
 
   .btn {
-    padding: 15px 45px;
+    padding: 10px 45px;
     border-radius: 25px;
     color: white;
-    font-weight: 600;
+    font-weight: 400;
     cursor: pointer;
     border: none;
     transition: opacity 0.3s;
@@ -190,7 +201,7 @@
     position: relative;
   }
 
-  .background-texture {
+  .about-me-background-texture {
     position: absolute;
     top: 0;
     right: 0;            
@@ -229,11 +240,25 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-me-content-title p{
+    color: #7E0101;
+    font-weight: 500;
+    margin: 0;
   }
 
   .about-me-description{
     font-family: "Heebo", sans-serifs;
     color: #868686;
+    margin: 0;
+  }
+
+  .progress {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 
   .progress-container{
@@ -249,13 +274,12 @@
   .progress-details p{
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 0;
+    margin: 0;
   }
   
   .mail-area{
     display: flex;
     align-items: center;
-    margin-top: 20px;
   }
 
   .mail-icon{
@@ -278,11 +302,210 @@
     font-size: 16px;
     font-weight: bold;  
   }
+
   .mail-action p {
     margin: 0;
     font-size: 14px;
     font-weight: 400;
     color: #868686;
+  }
+
+  .about-me-btn{
+    max-width: fit-content;
+    margin-top: 10px;
+  }
+
+  /* PARALAX */
+
+  .sheep-paralax-container img {
+    width: 100%;
+  }
+
+  /* LATEST PROJECTS */
+
+  #latest-projects {
+    position: relative;
+  }
+
+  .latest-projects-background-texture {
+    position: absolute;
+    bottom: -15%;
+    width: 100%;  
+    z-index: -1;
+  }
+
+  .latest-projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 100px;
+
+    max-width: 1200px;
+    margin: 150px auto;
+    padding: 0 20px;
+  }
+
+  .latest-projects-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .latest-projects-title img{
+    max-width: 100%;
+  }
+  
+  .latest-projects-rabisco{
+    position: absolute;
+    bottom: -25%;
+    right: -50px;
+  }
+
+  .latest-projects-container p {
+    letter-spacing: 4px;
+  }
+
+  .latest-projects-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+
+    grid-gap: 30px;
+    margin: 10px 0;
+  }
+
+  .latest-projects-gallery img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-div-1{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gallery-div-1-gradient {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top, rgb(0,0,0,0.6), transparent);
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .gallery-div-1-content{
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+
+    padding: 20px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .gallery-div-1-content-left p{
+    font-size: 14px;
+    color: #F9F9F9;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .arrow-btn {
+    background-color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arrow-btn img {
+    width: 10px; 
+    object-fit: contain; 
+  }
+  
+  .gallery-div-2{
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 2
+  }
+
+  .gallery-div-3{
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1
+  }
+
+  .gallery-div-4{
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 1
+  }
+
+  /* FOOTER */
+
+  footer {
+    background-image: url(images/footer_bg_texture.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 492px;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 100px;
+  }
+
+  .footer-col-1 p {
+    color: #F9F9F9;
+    font-weight: 400;
+    margin-top: 15px;
+  }
+
+  .footer-col-3 p {
+    color: #F9F9F9;
+    font-weight: 400;
+    margin-top: 45px;
+  }
+
+  .footer-col-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-socials {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .footer-col-3 .btn {
+    color: #161616;
   }
 
 </style>
@@ -296,13 +519,25 @@
       </div>
       <nav>
         <a href="#about-me">Sobre mim</a>
-        <a href="">Serviços</a>
-        <a href="">Portfólio</a>
+        <a href="#latest-projects">Serviços</a>
+        <a href="#latest-projects">Portfólio</a>
       </nav>
     </div>
   </header>
 
   <main>
+
+    <div class="fixed-socials">
+      <a href="https://www.behance.net/" target="_blank">
+        <img src="images/fixed_behance.png" alt="">
+      </a>
+      <a href="https://br.linkedin.com/" target="_blank">
+        <img src="images/fixed_linkedin.png" alt="">
+      </a>
+      <a href="https://wa.me/" target="_blank">
+        <img src="images/fixed_whatsapp.png" alt="">
+      </a>
+    </div>
     
     <section id="hero-banner">
       <img src="images/branches.png" alt="" class="background-branches">
@@ -317,7 +552,7 @@
 
           <div class="hero-buttons">
             <a class="btn btn-primary">Entre em contato</a>
-            <a href="images/figma.png" download class="btn btn-secondary">Baixar Currículo</a>
+            <a href="images/jow_galeria.png" download class="btn btn-secondary">Baixar Currículo</a>
           </div>
 
         </div>
@@ -333,25 +568,25 @@
         <div class="tool-card">
           <img src="images/illustrator.png" alt="" class="tool-icon">
           <h3>Adobe Illustrator</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+          <p>Criação de ilustrações vetoriais, logotipos, ícones e elementos gráficos para interfaces e motion.</p>
         </div>
 
         <div class="tool-card">
           <img src="images/photoshop.png" alt="" class="tool-icon">
           <h3>Adobe Photoshop</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+          <p>Edição de imagens, criação de composições visuais e ajustes avançados de cor e textura.</p>
         </div>
 
         <div class="tool-card">
           <img src="images/after_effects.png" alt="" class="tool-icon">
           <h3>Adobe After Effects</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+          <p>Criação de transições, efeitos visuais e animações para vídeos e interfaces.</p>
         </div>
 
         <div class="tool-card">
           <img src="images/figma.png" alt="" class="tool-icon">
           <h3>Figma</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+          <p>Design de interfaces, prototipação interativa e colaboração em tempo real.</p>
         </div>
 
       </div>
@@ -367,55 +602,151 @@
         
         <div class="about-me-content-right">
 
-          <p style="color: #7E0101; font-weight: 500;">SOBRE MIM</p>
-          <img src="images/pra_voce_sou_jow.svg" alt="">
+          <div class="about-me-content-title">
+            <p style="color: #7E0101; font-weight: 500;">SOBRE MIM</p>
+            <img src="images/pra_voce_sou_jow.svg" alt="">
+          </div>
+
           <p class="about-me-description">
-            Estudante de Design de São Paulo, criado entre CDs riscados de filmes de terror e riffs
-            de bandas nu-metal, focado em Motion Design e UX/UI. Meu trabalho bebe de varias
-            fontes desde as trasheiras da Troma Entertainment, slasher, sangue falso e os caralho.
-            Aos 21, já abandonei a ideia de salvar a minha alma.
+              Estudante de Design de São Paulo, criado entre CDs riscados de filmes de terror e riffs
+              de bandas nu-metal, focado em Motion Design e UX/UI. Meu trabalho bebe de varias
+              fontes desde as trasheiras da Troma Entertainment, slasher, sangue falso e os caralho.
+              Aos 21, já abandonei a ideia de salvar a minha alma.
           </p>
 
-          <div class="progress-container">
-            <div class="progress-details">
-              <p>Nível de Estresse</p>
-              <p>90%</p>
-            </div>
-            <img src="images/stress_progress.svg" alt="">
-          </div>
+          <div class="progress">
 
-          <div class="progress-container">
-            <div class="progress-details">
-              <p>Vontade de viver</p>
-              <p>30%</p>
+            <div class="progress-container">
+              <div class="progress-details">
+                <p>Nível de Estresse</p>
+                <p>90%</p>
+              </div>
+              <img src="images/stress_progress.svg" alt="">
             </div>
-            <img src="images/life_progress.svg" alt="">
-          </div>
 
+            <div class="progress-container">
+              <div class="progress-details">
+                <p>Vontade de viver</p>
+                <p>30%</p>
+              </div>
+              <img src="images/life_progress.svg" alt="">
+            </div>
+
+          </div>
+          
           <div class="mail-area">
-            <div class="mail-icon">
+
+            <a class="mail-icon" href="mailto:blacksheepds@gmail.com">
               <img src="images/mail.svg" alt="">
-            </div>
+            </a>
+
             <div class="mail-action">
               <h3>Mande um e-mail</h3>
               <p>blacksheepds@gmail.com</p>
             </div>
+
           </div>
 
-            <!-- <a class="btn btn-primary">Ver mais</a> -->
+          <a class="btn btn-primary about-me-btn">Ver mais</a>
 
         </div>
         
       </div>
-      <img src="images/bg_texture.png" alt="" class="background-texture">
+      <img src="images/bg_texture.png" alt="" class="about-me-background-texture">
     </section>
+
+    <section id="sheep-paralax">
+
+      <div class="sheep-paralax-container">
+        <img src="images/sheep_paralax.jpg" alt="">
+      </div>
     
+    </section>
+
+    <section id="latest-projects">
+      
+      <div class="latest-projects-container">
+
+        <div class="latest-projects-title">
+          <p>ÚLTIMOS PROJETOS</p>
+          <img src="images/transformando_ideias.svg" alt="">
+          <img src="images/rabisco.svg" alt="" class="latest-projects-rabisco">
+        </div>
+        
+        <div class="latest-projects-gallery">
+
+          <div class="gallery-div-1"> 
+            <div class="gallery-div-1-gradient"></div>
+            <img src="images/gallery_img_1.png" alt="">
+
+            <div class="gallery-div-1-content">
+              
+              <div class="gallery-div-1-content-left">
+                <p>UX/UI Design</p>
+                <img src="images/bilhete_unico.svg" alt="">
+              </div>
+
+              <div class="arrow-btn">
+                <img src="images/arrow-btn.svg" alt="">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="gallery-div-2"> <img src="images/gallery_img_2.png" alt=""> </div>
+          <div class="gallery-div-3"> <img src="images/gallery_img_3.png" alt=""> </div>
+          <div class="gallery-div-4"> <img src="images/gallery_img_4.png" alt=""> </div>
+        </div>
+
+        <img src="images/nao_gostou.svg" alt="">
+
+        <img src="images/bg_texture_2.png" alt="" class="latest-projects-background-texture">
+
+      </div>
+
+    </section>
 
   </main>
   
   <footer>
+    <div class="footer-container">
 
+      <div class="footer-col-1">
+        <img src="images/bsd_footer_logo.png" alt="">
+        <p>© <span id="current-year"></span> All Rights Reserved</p>
+      </div>
+    
+      <div class="footer-col-2">
+        <img src="images/pregos.png" alt="">
+        <div class="footer-socials">
+          <a href="https://www.behance.net/" target="_blank">
+            <img src="images/footer_behance.png" alt="">
+          </a>
+          <a href="https://br.linkedin.com/" target="_blank">
+            <img src="images/footer_linkedin.png" alt="">
+          </a>
+          <a href="https://wa.me/" target="_blank">
+            <img src="images/footer_whatsapp.png" alt="">
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-col-3">
+        <button class="btn">
+          Vamos conversar
+        </button>
+        
+        <p>Política de privacidade</p>
+      </div>
+
+    </div>
   </footer>
+
+  <script>
+    var date = new Date()
+    var year = date.getFullYear()
+    document.getElementById('current-year').innerHTML = year
+  </script>
 
 </body>
 </html>
